@@ -8,100 +8,154 @@
     <title>EduOnline</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light ">
-            <div class="container-fluid">
-              <img src="img/inconoFInal-removebg-preview.png" alt="logo EduOnline" width="60">
-              <a class="navbar-brand" href="#">EDUONLINE</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Cursos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Precios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Testimonios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Noticias</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                  </li>
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!--
+          <a href="index.html" class="logo"><img src="img/inconoFInal-removebg-preview.png" alt=""></a> -->
+            <h1 class="logo"><a href="index.html">EDUONLINE<span>.</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">Cursos</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Precios</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">Testimonios</a></li>
+                    <li class="dropdown"><a href="#"><span>Noticias</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Programación</a></li>
+                            <li><a href="#">Tecnología</a></li>
+                            <li><a href="#">CS</a></li>
+                            <li><a href="#">BBDD</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
                 </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
 
-                <a href="/inicio" type="button" class="btn btn-primary mr">Iniciar Sesión</a>
-                <a href="/inicio" type="button" class="btn btn-primary">Registrarme</a>
-
-              </div>
-            </div>
-          </nav>
-    </header>
-    <main>
-        <h1>Aprende a programar hoy</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, possimus, tempore dolorum quod eius
-            delectus ut labore neque reprehenderit sed ad alias dignissimos saepe perspiciatis aliquid nobis quae
-            explicabo harum!</p>
-        <a href="/inicio">Iniciar</a> <br>
-        <!--<img src="img/personaProgramando.jpg" alt="Persona programando">-->
-    </main>
-    <hr>
-    <section>
-        <h2 id="especialidades">Especialidades</h2>
-        <div>
-            <div>
-                <h3>Desarrollo de aplicaciones móviles</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, pariatur molestiae et, quam temporibus
-                    sunt non deleniti nisi atque tempore veniam provident maiores labore beatae eaque architecto laborum
-                    adipisci omnis.</p>
-                <a href="#">Explorar</a>
-            </div>
-            <div>
-                <h3>Desarrollo Web</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni sequi accusantium praesentium ipsum,
-                    vel, eaque cupiditate dolores quisquam reiciendis laboriosam aliquam quibusdam sunt consequatur
-                    tempora, cumque illo? Soluta, modi rerum!</p>
-                <a href="#">Explorar</a>
-            </div>
-            <div>
-                <h3>Diseño de interfaces</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non rem animi ab obcaecati ducimus,
-                    inventore delectus incidunt omnis dicta esse voluptatibus odio dolorum perferendis, placeat sapiente
-                    molestiae blanditiis aspernatur expedita.</p>
-                <a href="#">Explorar</a>
-            </div>
-            <div>
-                <h3>Mercadeo digital</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sapiente cumque voluptas est minima
-                    neque laboriosam sunt iste in et rem, quidem repellendus excepturi consectetur expedita autem id
-                    nihil cum?</p>
-                <a href="#">Explorar</a>
-            </div>
-            <div>
-                <h3>Desarrollo Frontend</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam possimus, iusto eligendi facere eum
-                    illo nostrum aut, obcaecati a fugit inventore nisi est eaque ex! Totam itaque ratione at vitae.</p>
-                <a href="#">Explorar</a>
-            </div>
-            <div>
-                <h3>Desarrollo Backend</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem expedita tenetur
-                    reprehenderit impedit adipisci maxime quia nisi fuga quasi mollitia, vel asperiores, illum vitae
-                    soluta alias numquam assumenda ab commodi.</p>
-                <a href="#">Explorar</a>
-            </div>
-            <a href="#">Explorar todos</a>
         </div>
-    </section>
-    <hr>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container" data-aos="zoom-out" data-aos-delay="100">
+            <div class="contenedorPrincipal">
+                <h1>Aprende a programar <span>Hoy</span></h1>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio a, sint.</h2>
+
+            </div>
+            <div class="d-flex">
+                <a href="#about" class="btn-get-started scrollto">Iniciar Sesión</a>
+                <a href="#" class="glightbox btn-watch-video"><i
+                        class="bi bi-play-circle"></i><span>Registrarme</span></a>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+        <!-- ======= Featured Services Section ======= -->
+        <section id="featured-services " class="featured-services especialidades">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h3>Especialidades</h3>
+                </div>
+                <div class="row row-cols-3">
+                    <div class="col">
+                        <!--col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0-->
+                        <div class="">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                                <h4 class="title"><a href="">Desarrollo Aplicaciones Moviles</a></h4>
+                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
+                                    excepturi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                                <div class="icon"><i class="bx bx-file"></i></div>
+                                <h4 class="title"><a href="">Desarrollo Web</a></h4>
+                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                    dolore</p>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col">
+                        <div class="mb-5">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                                <h4 class="title"><a href="">Diseño de interfaces</a></h4>
+                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                    officia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-5">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                                <div class="icon"><i class="bx bx-world"></i></div>
+                                <h4 class="title"><a href="">Mercadeo Digital</a></h4>
+                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-5">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                                <div class="icon"><i class="bx bx-world"></i></div>
+                                <h4 class="title"><a href="">Desarrollo Frontend</a></h4>
+                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-5">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                                <div class="icon"><i class="bx bx-world"></i></div>
+                                <h4 class="title"><a href="">Desarrollo Backend</a></h4>
+                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Featured Services Section -->
+    </main>
+    
     <section>
         <h2 id="cursos">Cursos</h2>
         <div>
