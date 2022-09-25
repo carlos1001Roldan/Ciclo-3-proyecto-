@@ -702,7 +702,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Featured Services
+# Especialidades Services
 --------------------------------------------------------------*/
 .especialidades {
   background-color: black;
@@ -773,6 +773,18 @@ section {
   color: #fff;
 }
 
+/*---------
+# Cursos
+-----------
+*/
+
+#cursos-title {
+  color: black;
+}
+
+.contendor-logo {
+  background-color: white;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -951,6 +963,13 @@ section {
   justify-content: center;
   margin-bottom: 20px;
   transition: ease-in-out 0.3s;
+}
+
+.icon {
+  width: 60%;
+  height: 60%;
+  display: block;
+  margin: auto;
 }
 
 .services .icon-box .icon i {
@@ -1272,7 +1291,7 @@ section {
   padding: 60px 0;
 }
 
-.team .member {
+.team .course {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 4px;
@@ -1280,12 +1299,13 @@ section {
   box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
 }
 
-.team .member .member-img {
+.team .course .course-img {
   position: relative;
   overflow: hidden;
+  padding: 10px;
 }
 
-.team .member .social {
+.team .course .social {
   position: absolute;
   left: 0;
   bottom: 30px;
@@ -1295,7 +1315,7 @@ section {
   text-align: center;
 }
 
-.team .member .social a {
+.team .course .social a {
   transition: color 0.3s;
   color: #222222;
   margin: 0 3px;
@@ -1309,40 +1329,40 @@ section {
   color: #fff;
 }
 
-.team .member .social a:hover {
+.team .course .social a:hover {
   background: #3b8af2;
 }
 
-.team .member .social i {
+.team .course .social i {
   font-size: 18px;
 }
 
-.team .member .member-info {
+.team .course .course-info {
   padding: 25px 15px;
 }
 
-.team .member .member-info h4 {
+.team .course .course-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
   color: #222222;
 }
 
-.team .member .member-info span {
+.team .course .course-info span {
   display: block;
   font-size: 13px;
   font-weight: 400;
   color: #aaaaaa;
 }
 
-.team .member .member-info p {
+.team .course .course-info p {
   font-style: italic;
   font-size: 14px;
   line-height: 26px;
   color: #777777;
 }
 
-.team .member:hover .social {
+.team .course:hover .social {
   opacity: 1;
   bottom: 15px;
 }

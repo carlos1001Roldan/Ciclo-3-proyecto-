@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ProyectoCursosController {
     
-    @GetMapping("/inicio")
+    @GetMapping("/iniciosesion")
     public String goToInicioSesion(Model model) {
         return "iniciosesion";
     }
