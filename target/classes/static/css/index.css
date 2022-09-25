@@ -1009,215 +1009,6 @@ section {
   border-color: #106eea;
 }
 
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-.testimonials {
-  padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-}
-
-.testimonials::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.testimonials .section-header {
-  margin-bottom: 40px;
-}
-
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  text-align: center;
-  color: #fff;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 100px;
-  border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.15);
-  margin: 0 auto;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-  color: #fff;
-}
-
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: #ddd;
-  margin: 0 0 15px 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 26px;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 auto 15px auto;
-  color: #eee;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  opacity: 1;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #106eea;
-}
-
-@media (min-width: 992px) {
-  .testimonials .testimonial-item p {
-    width: 80%;
-  }
-}
-
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 15px auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-  padding: 2px 15px;
-}
-
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #444444;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  color: #106eea;
-}
-
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-
-.portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 0;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 15px;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 600;
-  color: #222222;
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-  color: #555555;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 40px;
-  font-size: 24px;
-  top: calc(50% - 18px);
-  color: #3c3c3c;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #106eea;
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 10px;
-}
-
-.portfolio .portfolio-item .portfolio-links {
-  opacity: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
-}
-
-.portfolio .portfolio-item .portfolio-links a {
-  color: #fff;
-  margin: 0 2px;
-  font-size: 28px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-item .portfolio-links a:hover {
-  color: #6ba7f5;
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 20px;
-}
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -1285,13 +1076,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Team
+# Courses
 --------------------------------------------------------------*/
-.team {
+.courses {
   padding: 60px 0;
 }
 
-.team .course {
+.courses .course {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 4px;
@@ -1299,13 +1090,15 @@ section {
   box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
 }
 
-.team .course .course-img {
+.courses .course .course-img {
   position: relative;
   overflow: hidden;
-  padding: 10px;
+  padding: 15px;
+  height: 350px;
+  text-align: center;
 }
 
-.team .course .social {
+.courses .course .social {
   position: absolute;
   left: 0;
   bottom: 30px;
@@ -1315,7 +1108,7 @@ section {
   text-align: center;
 }
 
-.team .course .social a {
+.courses .course .social a {
   transition: color 0.3s;
   color: #222222;
   margin: 0 3px;
@@ -1329,40 +1122,40 @@ section {
   color: #fff;
 }
 
-.team .course .social a:hover {
+.courses .course .social a:hover {
   background: #3b8af2;
 }
 
-.team .course .social i {
+.courses .course .social i {
   font-size: 18px;
 }
 
-.team .course .course-info {
+.courses .course .course-info {
   padding: 25px 15px;
 }
 
-.team .course .course-info h4 {
+.courses .course .course-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
   color: #222222;
 }
 
-.team .course .course-info span {
+.courses .course .course-info span {
   display: block;
   font-size: 13px;
   font-weight: 400;
   color: #aaaaaa;
 }
 
-.team .course .course-info p {
+.courses .course .course-info p {
   font-style: italic;
   font-size: 14px;
   line-height: 26px;
   color: #777777;
 }
 
-.team .course:hover .social {
+.courses .course:hover .social {
   opacity: 1;
   bottom: 15px;
 }
@@ -1859,3 +1652,17 @@ section {
   }
 }
 
+.card{
+    
+  border:none;
+}
+
+.user-content p{
+  margin-top:5px;
+  font-size:12px;
+}
+
+
+.ratings i{
+  color:blue;
+}
