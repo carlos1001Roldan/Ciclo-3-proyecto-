@@ -4,9 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+// Usando Lombok
+@Data // Métodos Getter y Setter
+@NoArgsConstructor // Constructor sin atributos
+@AllArgsConstructor // Constructor con todos los atributos
 public class EspecialidadDto {
     private String nombre;
     private String descripcion;

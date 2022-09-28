@@ -12,4 +12,11 @@ public class ProyectoCursosController {
         return "iniciosesion";
     }
 
+    @GetMapping("/catalogoEsp")
+    public String goToEspecialidades(Model model) {
+        
+
+        return "catalogoEspecialidades";
+    }
+
 }
