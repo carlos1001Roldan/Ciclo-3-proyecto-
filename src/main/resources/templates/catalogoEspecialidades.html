@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -62,11 +62,9 @@
                 <div>
                     <h6 class="p-1 border-bottom">Categorias</h6>
                     <ul>
-                        <li><a href="#">Desarrollo Web</a></li>
-                        <li><a href="#">Desarrollo Movil</a></li>
-                        <li><a href="#">Mercadeo Digital</a></li>
-                        <li><a href="#">Frontend</a></li>
-                        <li><a href="#">Backend</a></li>
+                        <li th:each="especialidad: ${especialidades}">
+                            <a href="#"><span th:text="${especialidad.nombre}">Desarrollo Web</span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -76,11 +74,9 @@
                     <div>
                         <h6 class="p-1 border-bottom">Categorias</h6>
                         <ul>
-                            <li><a href="#">Desarrollo Web</a></li>
-                            <li><a href="#">Desarrollo Movil</a></li>
-                            <li><a href="#">Mercadeo Digital</a></li>
-                            <li><a href="#">Frontend</a></li>
-                            <li><a href="#">Backend</a></li>
+                            <li th:each="especialidad: ${especialidades}">
+                                <a href="#"><span th:text="${especialidad.nombre}">Desarrollo Web</span></a>
+                            </li>
                         </ul>
                     </div>
         
