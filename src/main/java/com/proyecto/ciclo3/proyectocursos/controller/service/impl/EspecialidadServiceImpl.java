@@ -2,6 +2,7 @@ package com.proyecto.ciclo3.proyectocursos.controller.service.impl;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import com.proyecto.ciclo3.proyectocursos.controller.service.EspecialidadService
 public class EspecialidadServiceImpl implements EspecialidadService{
     
     private final List<EspecialidadDto> especialidades = Arrays.asList(
-        new EspecialidadDto("Desarrollo Android", "Aprende a desarollar web de la mejor manera", 1),
+        new EspecialidadDto("Desarrollo Web", "Aprende a desarollar web de la mejor manera", 1),
         new EspecialidadDto("Desarrollo Movil", "Se uno de los mejores desarrolladores moviles!!", 2),
         new EspecialidadDto("Mercadeo Digital", "Desarrolla nuevas habilidades de marketing", 3),
         new EspecialidadDto("Frontend", "Desarrolla excelentes interfaces para tus clientes", 4),
@@ -23,6 +24,14 @@ public class EspecialidadServiceImpl implements EspecialidadService{
     @Override
     public List<EspecialidadDto> getEspecialidades() {
         return especialidades;
+    }
+
+    @Override
+    public Optional<EspecialidadDto> getEspecialidadPorId(Integer id) {
+        var especialidad = especialidades.stream()
+            .filter(e -> e.getId().equals(id))
+            .findFirst();
+        return especialidad;
     }
 
 
