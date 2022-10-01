@@ -12,19 +12,12 @@
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/catalogoEspecialidades.css">
-    <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/catalogoEspecialidades.css">
+    <link rel="stylesheet" href="/css/index.css"> 
+    <!--<link rel="stylesheet" th:href="@{/css/catalogoEspecialidades.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}"> -->
 </head>
 
 <body>
@@ -75,98 +68,36 @@
                         <h6 class="p-1 border-bottom">Categorias</h6>
                         <ul>
                             <li th:each="especialidad: ${especialidades}">
-                                <a class="active" href="#"><span th:text="${especialidad.nombre}">Desarrollo Web</span></a>
+                                <a th:href="@{/catalogoEsp/{id}(id=${especialidad.id})}">
+                                    <span th:text="${especialidad.nombre}">Desarrollo Web</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-        
+
                 </section>
+
+                <div id="error" th:if="${error != null}" class="alert alert-warning" role="alert">
+                    <span th:text="${error}">Error</span>
+                </div>
+
+
                 <section id="products">
                     <div class="container">
+                        <h1 th:text="${titulo}">Titulo seleccionar categoria</h1>
                         <div class="row">
-                            <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
-                                        alt="Card image cap">
+                            <div th:if="${!cursos.isEmpty()}" th:each="curso:${cursos}"
+                                class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
+                                <div class="card">
+                                    <img class="card-img-top"
+                                        th:src="${curso.urlImagen != null ? curso.urlImagen : 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png'}"
+                                        th:alt="${curso.nombre}">
                                     <div class="card-body">
-                                        <p class="card-text subtitulo">Python</p>
-                                        <p>$90</p> 
+                                        <p th:text="${curso.nombre}" class="card-text subtitulo">Nombre Curso</p>
+                                        <p>$90</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 offset-lg-0 col-sm-4 offset-sm-2 col-11 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="http://assets.stickpng.com/thumbs/62a86efa14a38cce0c371c11.png"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text subtitulo">Java</p>
-                                        <p>$100</p> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png"
-                                        alt="Card image cap">
-                                    <div class="card-body subtitulo">
-                                        <p class="card-text">HTML</p>
-                                        <p>$950</p> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 offset-lg-0 offset-sm-2 col-11 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="https://images.unsplash.com/photo-1537182534312-f945134cce34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text subtitulo">Tree Trunk table set</p>
-                                        <p>$390</p> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="https://images.pexels.com/photos/3230274/pexels-photo-3230274.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text subtitulo">Red Leather Bar Stool</p>
-                                        <p>$30</p> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 offset-lg-0 offset-sm-2 col-11 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="https://images.pexels.com/photos/3773571/pexels-photo-3773571.png?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text subtitulo">Modern Dining Table</p>
-                                        <p>$740</p> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="https://images.pexels.com/photos/534172/pexels-photo-534172.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text subtitulo">Boring Dining Table</p>
-                                        <p>$760</p> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 offset-lg-0 offset-sm-2 col-11 offset-1">
-                                <div class="card"> <img class="card-img-top"
-                                        src="https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text subtitulo">An Ugly Office</p>
-                                        <p>$90</p> 
-                                    </div>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
                 </section>

@@ -26,6 +26,7 @@ public class ProyectoCursosController {
         
         var especialidades = this.especialidadService.getEspecialidades();
 
+        model.addAttribute("titulo", "Seleccione una categoria");
         model.addAttribute("especialidades", especialidades);
 
         return "catalogoEspecialidades";
@@ -36,11 +37,19 @@ public class ProyectoCursosController {
         
         var especialidadOp = this.especialidadService.getEspecialidadPorId(id);
         var especialidades = this.especialidadService.getEspecialidades();
-
         model.addAttribute("especialidades", especialidades);
 
-        
+        if(especialidadOp.isEmpty()) 
+            model.addAttribute("error", "La categoria no existe");
+        else{
+            var especialidad = especialidadOp.get();
 
+            model.addAttribute("titulo", especialidad.getNombre());
+            model.addAttribute("id", especialidad.getId());
+
+            var especialidadCursos = this.especialidadService.getCursosPorEspecialidad(id);
+            model.addAttribute("cursos", especialidadCursos);
+        }
 
         return "catalogoEspecialidades";
     }
